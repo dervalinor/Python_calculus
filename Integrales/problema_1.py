@@ -10,7 +10,7 @@ integrand = x**3 * (x**4 - 1)**2
 # Calcular la integral
 result = integrate(integrand, x)
 
-
+# Expandir el resultado para mejor visualización
 expanded_result = expand(result)
 
 # Verificar la integral derivando el resultado
@@ -22,21 +22,9 @@ def print_results():
     print("Integral original:")
     print(f"∫ x³(x⁴ - 1)² dx")
 
-    print("\nResultado de la integración:")
-    print(f"= {result}")
+    print("\nResultado:")
+    print(f"∫ x³(x⁴ - 1)² dx = {expanded_result}")
 
-    print("\nResultado expandido:")
-    print(f"= {expanded_result}")
 
-# Ejecutar la verificación
+# Imprimir resultados
 print_results()
-
-# Realizar la integración por sustitución manual (para verificar el método)
-u = symbols('u')
-# u = x⁴ - 1
-# du = 4x³ dx
-# x³ dx = du/4
-
-substitution_integral = integrate(u**2/4, u)
-print("\nResultado usando sustitución u = x⁴ - 1:")
-print(f"= {substitution_integral}")
